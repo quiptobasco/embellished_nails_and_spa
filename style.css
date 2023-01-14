@@ -3,13 +3,13 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
     --header-footer-bg-color: #7395ae;
     --text-color: black;
     --body-bg-color: #264b66;
-    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 110px;
     background-color: var(--header-footer-bg-color);
     display: flex;
     flex-direction: column;
@@ -41,13 +41,29 @@ header {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-top: -20px;
+}
+
+.left-side {
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.left-side h1 {
+    font-family: 'Arizonia', cursive;
+}
+
+.header-container i {
+    font-size: 2em;
+    padding-right: 20px;
 }
 
 header a {
     text-transform: uppercase;
-    color: var(--text-color);
     text-decoration: none;
+    color: var(--text-color);
     margin: 0 10px;
 }
 
@@ -55,9 +71,27 @@ header a:hover {
     text-decoration: underline;
 }
 
-header .book-now-link {
-    padding: 0px 50px 0px 50px;
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    to {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
 }
+
+.book-now-link {
+    text-transform: uppercase;
+    animation: pulse 1s infinite;
+    animation-fill-mode: forwards;
+}
+
+.book-now-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
 header .book-now-link:hover .people {
     display: block;
 }
@@ -66,12 +100,9 @@ header .book-now-link .people {
     display: none;
     position: absolute;
     top: 100%;
-    right: 20px;
-    width: 200px;
-    border: 5px solid var(--header-footer-bg-color);
-    border-bottom: none;
-    border-top: none;
+    padding: 4px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 header .book-now-link .people a {
@@ -147,6 +178,7 @@ body {
     max-width: 800px;
     height: 350px;
     position: relative;
+    top: 50px;
     overflow: hidden;
     border-radius: 15px;
 }
@@ -224,7 +256,7 @@ body {
     cursor: pointer;
     top: 10px;
     left: 10px;
-    z-index: 100;
+    z-index: 2;
 }
 
 .hamburger {
@@ -255,6 +287,35 @@ body {
 
 .hamburger:after {
     top: 8px;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 150px;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    transition: left 0.3s ease;
+    background-color: var(--header-footer-bg-color);
+}
+
+.menu-container.open {
+    left: 0;
+}
+
+.menu a {
+    display: block;
+    border-bottom: 1px solid var(--body-bg-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 1180px) {

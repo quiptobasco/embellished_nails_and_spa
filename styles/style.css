@@ -357,6 +357,10 @@ body {
     .slider-container {
         max-width: 100%;
     }
+
+    .information-container {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width: 1181px) {

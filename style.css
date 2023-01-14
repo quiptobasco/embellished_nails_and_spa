@@ -93,6 +93,7 @@ header .book-now-link .people a:hover {
 body {
     height: 100vh;
     display: grid;
+    padding-top: 30px;
     place-items: center;
     background: linear-gradient(
         to right,

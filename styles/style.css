@@ -348,6 +348,7 @@ body {
 
     .book-now-buttons-container {
         display: block;
+        padding-top: 70px;
     }
 
     .hamburger-menu {
@@ -356,6 +357,10 @@ body {
 
     .slider-container {
         max-width: 100%;
+    }
+
+    .slider {
+        padding-top: 30px;
     }
 
     .information-container {

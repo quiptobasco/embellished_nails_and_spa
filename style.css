@@ -20,6 +20,26 @@ header {
     height: 80px;
     background-color: var(--header-footer-bg-color);
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.right-side-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.right-side {
+    display: flex;
+    flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: flex-end;
 }
@@ -35,14 +55,14 @@ header a:hover {
     text-decoration: underline;
 }
 
-header .book-now-button {
+header .book-now-link {
     padding: 0px 50px 0px 50px;
 }
-header .book-now-button:hover .people {
+header .book-now-link:hover .people {
     display: block;
 }
 
-header .book-now-button .people {
+header .book-now-link .people {
     display: none;
     position: absolute;
     top: 100%;
@@ -54,7 +74,7 @@ header .book-now-button .people {
     box-sizing: border-box;
 }
 
-header .book-now-button .people a {
+header .book-now-link .people a {
     display: block;
     margin: 0;
     width: 100%;
@@ -66,7 +86,7 @@ header .book-now-button .people a {
     box-sizing: border-box;
 }
 
-header .book-now-button .people a:hover {
+header .book-now-link .people a:hover {
     background-color: #7395ae;
 }
 
@@ -79,6 +99,44 @@ body {
         var(--body-bg-color),
         var(--header-footer-bg-color)
     );
+    background-attachment: fixed;
+}
+
+.information-container {
+    position: relative;
+    display: flex;
+}
+
+.information-container .item {
+    margin: 10px;
+    border: 4px solid var(--header-footer-bg-color);
+    box-shadow: 2px 2px 5px var(--body-bg-color);
+    text-align: center;
+    word-wrap: break-word;
+    text-transform: uppercase;
+}
+
+.information-container ul {
+    padding: 15px;
+    list-style-type: none;
+}
+
+.information-container li {
+    padding: 2px;
+}
+
+.information-container h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.information-container a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.information-container a:hover {
+    text-decoration: underline;
 }
 
 .slider {
@@ -134,48 +192,51 @@ body {
     right: 2%;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background-color: var(--header-footer-bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.book-now-buttons-container {
+    display: none;
 }
 
-footer a {
-    text-transform: uppercase;
+.book-now-button {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--body-bg-color);
+    background-color: var(--header-footer-bg-color);
     color: var(--text-color);
     text-decoration: none;
-    margin: 0 10px;
+    text-transform: uppercase;
 }
 
-footer a:hover {
+.book-now-button:hover {
     text-decoration: underline;
 }
 
-/* Style the header for small screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1180px) {
     header {
-        position: static;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
-}
 
-/* Style the main content area for small screens */
-@media only screen and (max-width: 600px) {
-    main {
-        margin: 0; /* Remove the top and bottom margin */
+    .left-side {
+        text-align: center;
     }
-}
 
-/* Style the footer for small screens */
-@media only screen and (max-width: 600px) {
-    footer {
-        position: static;
-        width: 100%;
+    .right-side {
+        display: none;
     }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .book-now-link {
+        display: none;
+    }
+
+    .book-now-buttons-container {
+        display: block;
+    }
+
+    /* Add styles for the hamburger menu */
 }

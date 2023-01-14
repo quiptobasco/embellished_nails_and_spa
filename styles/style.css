@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --header-footer-bg-color: #7395ae;
+    --text-color: black;
+    --body-bg-color: #264b66;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background-color: var(--header-footer-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.right-side-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.right-side {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-top: -20px;
+}
+
+header .left-side h1.logo,
+a.logo {
+    padding-left: 5px;
+    padding-top: 3px;
+    font-family: 'Arizonia', cursive;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+header .left-side h3.logo {
+    padding-left: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.header-container i {
+    font-size: 2em;
+    padding-right: 20px;
+}
+
+.header-container a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+.header-container a:hover {
+    text-decoration: underline;
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    to {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+}
+
+.book-now-link {
+    text-transform: uppercase;
+    animation: pulse 1s infinite;
+    animation-fill-mode: forwards;
+}
+
+.book-now-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+header .book-now-link:hover .people {
+    display: block;
+}
+
+header .book-now-link .people {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header .book-now-link .people a {
+    display: block;
+    margin: 0;
+    width: 100%;
+    padding: 5px;
+    background: var(--header-footer-bg-color);
+    color: var(--text-color);
+
+    border-bottom: 5px solid var(--header-footer-bg-color);
+    box-sizing: border-box;
+}
+
+header .book-now-link .people a:hover {
+    background-color: #7395ae;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    padding-top: 30px;
+    place-items: center;
+    background: linear-gradient(
+        to right,
+        var(--body-bg-color),
+        var(--header-footer-bg-color)
+    );
+    background-attachment: fixed;
+}
+
+.information-container {
+    position: relative;
+    display: flex;
+}
+
+.information-container .item {
+    margin: 10px;
+    border: 4px solid var(--header-footer-bg-color);
+    box-shadow: 2px 2px 5px var(--body-bg-color);
+    text-align: center;
+    word-wrap: break-word;
+    text-transform: uppercase;
+}
+
+.information-container ul {
+    padding: 15px;
+    list-style-type: none;
+}
+
+.information-container li {
+    padding: 2px;
+}
+
+.information-container h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.information-container a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.information-container a:hover {
+    text-decoration: underline;
+}
+
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slide {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #000c;
+    font-weight: bolder;
+    text-shadow: 1px 1px 0 white;
+    font-size: 18px;
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.btn-prev {
+    top: 45%;
+    left: 2%;
+}
+
+.btn-next {
+    top: 45%;
+    right: 2%;
+}
+
+.book-now-buttons-container {
+    display: none;
+}
+
+.book-now-button {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--body-bg-color);
+    background-color: var(--header-footer-bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.book-now-button:hover {
+    text-decoration: underline;
+}
+
+.hamburger-menu {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+.hamburger {
+    width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    filter: drop-shadow(2px 2px 3px var(--body-bg-color));
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hamburger:before {
+    top: -8px;
+}
+
+.hamburger:after {
+    top: 8px;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 150px;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    transition: left 0.3s ease;
+    background-color: var(--header-footer-bg-color);
+}
+
+.menu-container.open {
+    left: 0;
+}
+
+.menu a {
+    display: block;
+    border-bottom: 1px solid var(--body-bg-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1180px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side {
+        text-align: center;
+    }
+
+    .right-side {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .book-now-link {
+        display: none;
+    }
+
+    .book-now-buttons-container {
+        display: block;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .slider-container {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1181px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .slider-container {
+        max-width: 100%;
+    }
+}

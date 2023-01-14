@@ -46,13 +46,19 @@ header {
     margin-top: -20px;
 }
 
-.left-side {
-    padding-left: 10px;
-    padding-top: 20px;
+header .left-side h1.logo,
+a.logo {
+    padding-left: 5px;
+    padding-top: 3px;
+    font-family: 'Arizonia', cursive;
+    color: var(--text-color);
+    text-decoration: none;
 }
 
-.left-side h1 {
-    font-family: 'Arizonia', cursive;
+header .left-side h3.logo {
+    padding-left: 10px;
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 .header-container i {
@@ -60,14 +66,14 @@ header {
     padding-right: 20px;
 }
 
-header a {
+.header-container a {
     text-transform: uppercase;
     text-decoration: none;
     color: var(--text-color);
     margin: 0 10px;
 }
 
-header a:hover {
+.header-container a:hover {
     text-decoration: underline;
 }
 
@@ -132,120 +138,6 @@ body {
         var(--header-footer-bg-color)
     );
     background-attachment: fixed;
-}
-
-.information-container {
-    position: relative;
-    display: flex;
-}
-
-.information-container .item {
-    margin: 10px;
-    border: 4px solid var(--header-footer-bg-color);
-    box-shadow: 2px 2px 5px var(--body-bg-color);
-    text-align: center;
-    word-wrap: break-word;
-    text-transform: uppercase;
-}
-
-.information-container ul {
-    padding: 15px;
-    list-style-type: none;
-}
-
-.information-container li {
-    padding: 2px;
-}
-
-.information-container h2 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.information-container a {
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-.information-container a:hover {
-    text-decoration: underline;
-}
-
-.slider {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    max-width: 800px;
-    height: 350px;
-    position: relative;
-    top: 50px;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.slide {
-    width: 100%;
-    max-width: 800px;
-    height: 350px;
-    position: absolute;
-    transition: all 0.5s;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
-    z-index: 10px;
-    cursor: pointer;
-    background-color: transparent;
-    color: #000c;
-    font-weight: bolder;
-    text-shadow: 1px 1px 0 white;
-    font-size: 18px;
-}
-
-.btn:active {
-    transform: scale(1.1);
-}
-
-.btn-prev {
-    top: 45%;
-    left: 2%;
-}
-
-.btn-next {
-    top: 45%;
-    right: 2%;
-}
-
-.book-now-buttons-container {
-    display: none;
-}
-
-.book-now-button {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px var(--body-bg-color);
-    background-color: var(--header-footer-bg-color);
-    color: var(--text-color);
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.book-now-button:hover {
-    text-decoration: underline;
 }
 
 .hamburger-menu {
@@ -316,6 +208,24 @@ body {
 
 .menu a:hover {
     text-decoration: underline;
+}
+
+.profile-container {
+    display: flex; /* Use flexbox to position the elements next to each other */
+}
+
+.profile-picture {
+    width: 30%; /* Set the width of the profile picture to 30% */
+    padding-right: 20px; /* Add some space between the picture and the bio */
+}
+
+.profile-picture img {
+    width: 100%; /* Make sure the image fills the entire width of the container */
+    border-radius: 50%; /* Make the profile picture a circle */
+}
+
+.bio-container {
+    width: 70%; /* Set the width of the bio container to 70% */
 }
 
 @media only screen and (max-width: 1180px) {

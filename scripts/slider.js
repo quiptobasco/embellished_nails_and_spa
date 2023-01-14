@@ -34,15 +34,3 @@ prevSlide.addEventListener('click', function () {
         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
     });
 });
-
-document
-    .querySelector('.hamburger-menu')
-    .addEventListener('click', function () {
-        document.querySelector('.menu-container').classList.toggle('open');
-    });
-
-document.addEventListener('click', function (event) {
-    if (!event.target.matches('.hamburger-menu, .hamburger-menu *')) {
-        document.querySelector('.menu-container').classList.remove('open');
-    }
-});

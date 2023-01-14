@@ -241,3 +241,9 @@ body {
 
     /* Add styles for the hamburger menu */
 }
+
+@media only screen and (max-width: 767px) {
+    .slider {
+        max-width: 100%;
+    }
+}

@@ -141,6 +141,8 @@ body {
 }
 
 .slider {
+    display: flex;
+    flex-wrap: nowrap;
     width: 100%;
     max-width: 800px;
     height: 350px;
@@ -198,6 +200,7 @@ body {
 }
 
 .book-now-button {
+    position: relative;
     display: inline-block;
     text-align: center;
     padding: 10px 20px;
@@ -240,10 +243,14 @@ body {
     }
 
     /* Add styles for the hamburger menu */
+
+    .slider-container {
+        max-width: 100%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-    .slider {
+    .slider-container {
         max-width: 100%;
     }
 }

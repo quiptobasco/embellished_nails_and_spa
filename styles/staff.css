@@ -129,9 +129,7 @@ header .book-now-link .people a:hover {
 
 body {
     height: 100vh;
-    /* display: grid; */
     padding-top: 160px;
-
     background: linear-gradient(
         to right,
         var(--body-bg-color),
@@ -212,14 +210,15 @@ body {
 
 .profile-container {
     display: grid;
-    grid-template-columns: 0.75fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, min-content);
     border: 2px solid var(--body-bg-color);
 }
 
 .profile-picture {
     padding-left: 100px;
-    height: 410px;
-    width: 196px;
+    /* height: 410px;
+    width: 196px; */
 }
 
 .bio-container {
@@ -272,7 +271,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 1574px) {
+@media only screen and (max-width: 767px) {
     .profile-container {
         border: none;
         display: grid;
@@ -281,14 +280,17 @@ body {
         padding-bottom: 20px;
     }
 
+    .profile-picture {
+        display: flex;
+        padding-left: 0px;
+        justify-content: center;
+    }
+
     .profile-container p {
         padding-left: 5px;
         padding-right: 5px;
         text-align: center;
     }
-}
-
-@media only screen and (max-width: 767px) {
     .slider-container {
         max-width: 100%;
     }

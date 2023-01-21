@@ -271,7 +271,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1121px) {
     .profile-container {
         border: none;
         display: grid;
@@ -297,10 +297,10 @@ body {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1122px) {
     .bio-container {
         position: absolute;
-        top: 100px;
+        top: 0%;
         left: 400px;
     }
 }

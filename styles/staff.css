@@ -129,9 +129,9 @@ header .book-now-link .people a:hover {
 
 body {
     height: 100vh;
-    display: grid;
-    padding-top: 30px;
-    place-items: center;
+    /* display: grid; */
+    padding-top: 160px;
+
     background: linear-gradient(
         to right,
         var(--body-bg-color),
@@ -144,7 +144,7 @@ body {
     display: none;
     width: 40px;
     height: 40px;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     top: 10px;
     left: 10px;
@@ -211,21 +211,24 @@ body {
 }
 
 .profile-container {
-    display: flex; /* Use flexbox to position the elements next to each other */
+    display: grid;
+    grid-template-columns: 0.75fr 1fr 1fr 1fr;
+    border: 2px solid var(--body-bg-color);
 }
 
 .profile-picture {
-    width: 30%; /* Set the width of the profile picture to 30% */
-    padding-right: 20px; /* Add some space between the picture and the bio */
-}
-
-.profile-picture img {
-    width: 100%; /* Make sure the image fills the entire width of the container */
-    border-radius: 50%; /* Make the profile picture a circle */
+    padding-left: 100px;
+    height: 410px;
+    width: 196px;
 }
 
 .bio-container {
-    width: 70%; /* Set the width of the bio container to 70% */
+    padding-top: 15%;
+}
+
+.bio-container h1 {
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1180px) {
@@ -266,6 +269,20 @@ body {
 @media only screen and (min-width: 1181px) {
     .hamburger-menu {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 1574px) {
+    .profile-container {
+        border: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        padding-bottom: 20px;
+    }
+
+    .profile-container p {
+        text-align: center;
     }
 }
 

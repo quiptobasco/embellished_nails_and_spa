@@ -135,7 +135,6 @@ header .book-now-link .people a:hover {
 body {
     height: 100vh;
     display: grid;
-    padding-top: 30px;
     place-items: center;
     background: linear-gradient(
         to right,
@@ -146,6 +145,7 @@ body {
 }
 
 .services-container {
+    padding-top: 10%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -227,7 +227,6 @@ body {
     margin: 10px;
     border: 4px solid var(--header-footer-bg-color);
     box-shadow: 2px 2px 5px var(--body-bg-color);
-    /* text-align: center; */
     word-wrap: break-word;
     text-transform: uppercase;
 }
@@ -285,7 +284,7 @@ li {
     }
 
     .services-container {
-        padding-top: 100px;
+        padding-top: 30%;
         grid-template-columns: repeat(1, 1fr);
     }
 }

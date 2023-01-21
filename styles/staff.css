@@ -217,12 +217,11 @@ body {
 
 .profile-picture {
     padding-left: 100px;
-    /* height: 410px;
-    width: 196px; */
 }
 
 .bio-container {
     padding-top: 15%;
+    z-index: -100;
 }
 
 .bio-container h1 {

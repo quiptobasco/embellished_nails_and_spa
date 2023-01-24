@@ -50,7 +50,7 @@ header .left-side h1.logo,
 a.logo {
     padding-left: 5px;
     padding-top: 3px;
-    font-family: 'Arizonia', cursive;
+    font-family: 'Allura', cursive;
     color: var(--text-color);
     text-decoration: none;
 }
@@ -93,8 +93,6 @@ header .left-side h3.logo {
 }
 
 .book-now-link:hover {
-    text-decoration: underline;
-    cursor: pointer;
     animation-play-state: paused;
 }
 

@@ -338,7 +338,15 @@ body {
     }
 
     .hamburger-menu {
+        z-index:1001;
+    }
+    .menu-container.open {
         display: block;
+        z-index: 1001;
+    }
+
+    .menu a {
+        z-index: 1001;
     }
 
     .book-now-link {

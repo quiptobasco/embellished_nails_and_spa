@@ -126,10 +126,10 @@ header .book-now-link .people a:hover {
 }
 
 body {
-    /* height: 100vh; */
-    /* display: grid; */
-    /* padding-top: 100px; */
-    /* place-items: center; */
+    /* height: 100vh;
+    display: grid;
+    padding-top: 100px;
+    place-items: center; */
     background: linear-gradient(
         to right,
         var(--body-bg-color),
@@ -208,42 +208,35 @@ body {
     text-decoration: underline;
 }
 
-
-.bio-container {
+.biography-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.biography-container {
-    /* padding-top: 200px; */
-    padding-left: 50px;
-    padding-right: 200px;
-    
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-}
-
-.name h1 {
-    margin-top: -15px;
-}
-
-.bio-image {
-    
+    justify-content: center;
+    text-align: center;
     padding-top: 200px;
-    margin-right: 100px;
-    
-}
+  }
+  
+  .biography-container img {
+    margin-bottom: 20px;
+  }
+  
+  .biography-container .name {
+    margin-bottom: 10px;
+  }
+  
+  .biography-container .bio {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .biography-container .button-book-now {
+    margin-bottom: 20px;
+  }
 
-.button-book-now {
-    margin-top: -45px;
-}
 
-.bio p {
-    font-size: larger;
-    padding-top: 50px;
-}
+
 
 .button-book-now {
     text-transform: uppercase;
@@ -312,29 +305,22 @@ body {
         max-width: 100%;
     }
 
-    .biography-container {
-        display: grid;
-        padding-top: 50px;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, min-content);
-    }
-
-    .bio-image {
-        padding: 0;
-        display: flex;
-        padding-bottom: 15px;
-    }
-
-    .bio p {
-        /* padding-top: 0; */
-        padding-bottom: 15px;
-    }
-
-    .button-book-now {
-        margin-top: 0;
-    margin-right: 400px;
-
-    }
 }
+
+@media (max-width: 767px) {
+    .biography-container {
+        padding-top: 50px;
+        margin: 0;
+    }
+
+    .biography-container .name {
+        margin: 0;
+    }
+
+    .biography-container .bio {
+        margin: 0;
+    }
+
+  }
 
 

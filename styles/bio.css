@@ -317,10 +317,15 @@ body {
         margin: 0;
     }
 
-    .biography-container .bio {
-        margin: 0;
+    .biography-container .name h1 {
+        margin-top: -20px;
     }
 
+    .biography-container .bio {
+        margin: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
   }
 
 

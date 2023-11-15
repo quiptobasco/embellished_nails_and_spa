@@ -239,7 +239,7 @@ body {
     background-color: var(--header-footer-bg-color);
 }
 
-.menu-container .open {
+.menu-container.open {
     left: 0;
 }
 
@@ -257,25 +257,11 @@ body {
 }
 
 @media only screen and (max-width: 1180px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        z-index: 1000;
-    }
-
-    .left-side {
-        text-align: center;
-    }
-
-    .right-side {
-        display: none;
-    }
-
     .hamburger-menu {
         z-index: 1001;
     }
 
-    .menu-container .open {
+    .menu-container.open {
         display: block;
         z-index: 1001;
     }
@@ -284,7 +270,11 @@ body {
         z-index: 1001;
     }
 
-    .book-now-link {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navbar {
         display: none;
     }
 
@@ -299,14 +289,6 @@ body {
 
     .book-now-buttons-container a {
         margin: 10px;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-
-    .navbar {
-        display: none;
     }
 
     .slider-container {

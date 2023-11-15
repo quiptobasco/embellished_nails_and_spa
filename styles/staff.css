@@ -58,18 +58,6 @@ body {
     text-decoration: underline;
 }
 
-.navbar a.book-now {
-    background-color: #000;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.navbar a.book-now:hover {
-    background-color: #333;
-}
-
 .hamburger-menu {
     display: none;
     width: 40px;
@@ -224,7 +212,6 @@ body {
 
 @media only screen and (max-width: 1180px) {
     .hamburger-menu {
-        display: block;
         z-index: 1001;
     }
 
@@ -235,6 +222,10 @@ body {
 
     .menu a {
         z-index: 1001;
+    }
+
+    .hamburger-menu {
+        display: block;
     }
 
     .navbar {

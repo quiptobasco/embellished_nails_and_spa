@@ -257,7 +257,7 @@ body {
     text-decoration: underline;
 }
 
-@media only screen and (min-height: 800px) {
+@media only screen and (min-height: 700px) {
     .slider {
         top: 385px;
     }

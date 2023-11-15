@@ -205,8 +205,10 @@ li {
         display: none;
     }
 
-    .logo {
-        margin-left: -11%;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .services-container {

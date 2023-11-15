@@ -7,135 +7,67 @@
 }
 
 :root {
-    --header-footer-bg-color: #7395ae;
+    --header-footer-bg-color: rgb(240, 229, 229);
     --text-color: black;
     --body-bg-color: #264b66;
 }
 
-header {
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(240, 229, 229);
+    background-attachment: fixed;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 110px;
-    background-color: var(--header-footer-bg-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(240, 229, 229);
 }
 
-.header-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-.right-side-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-}
-
-.right-side {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-right: 10px;
-    margin-top: -20px;
-}
-
-header .left-side h1.logo,
-a.logo {
-    padding-left: 5px;
-    padding-top: 3px;
-    font-family: 'Allura', cursive;
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-header .left-side h3.logo {
-    padding-left: 10px;
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.header-container i {
-    font-size: 2em;
-    padding-right: 20px;
-}
-
-.header-container a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--text-color);
-    margin: 0 10px;
-}
-
-.header-container a:hover {
-    text-decoration: underline;
-}
-
-@keyframes pulse {
-    from {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-    }
-    to {
-        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-    }
-}
-
-.book-now-link {
-    text-transform: uppercase;
-    animation: pulse 1s infinite;
-    animation-fill-mode: forwards;
-}
-
-.book-now-link:hover {
-    animation-play-state: paused;
-}
-
-header .book-now-link:hover .people {
+.logo {
     display: block;
+    margin: 0 auto;
 }
 
-header .book-now-link .people {
-    display: none;
-    position: absolute;
-    top: 100%;
-    padding: 4px;
-    box-sizing: border-box;
+.navbar {
     text-align: center;
 }
 
-header .book-now-link .people a {
-    display: block;
-    margin: 0;
-    width: 100%;
-    padding: 5px;
-    background: var(--header-footer-bg-color);
-    color: var(--text-color);
-
-    border-bottom: 5px solid var(--header-footer-bg-color);
-    box-sizing: border-box;
+.navbar ul {
+    list-style: none;
+    padding: 0;
 }
 
-header .book-now-link .people a:hover {
-    background-color: #7395ae;
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-body {
-    height: 100vh;
-    padding-top: 160px;
-    background: linear-gradient(
-        to right,
-        var(--body-bg-color),
-        var(--header-footer-bg-color)
-    );
-    background-attachment: fixed;
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
 
+.navbar a.active {
+    text-decoration: underline;
+}
 
+.navbar a.book-now {
+    background-color: #000;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.navbar a.book-now:hover {
+    background-color: #333;
 }
 
 .hamburger-menu {
@@ -208,17 +140,6 @@ body {
     text-decoration: underline;
 }
 
-/* .profile-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, min-content);
-    border: 2px solid var(--body-bg-color);
-} */
-
-/* .profile-picture {
-    padding-left: 100px;
-} */
-
 .bio-container {
     padding-top: 15%;
     z-index: -100;
@@ -231,26 +152,19 @@ body {
 
 .staff-profiles-container {
     display: grid;
-    /* flex-wrap: grid; */
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 20px;
+    padding-top: 385px;
     margin: 0 auto;
     max-width: 1200px;
 }
 
-
-
 .profile-card {
-
     text-transform: uppercase;
-    /* display: flex; */
-    /* flex: 1; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* top: 10px; */
     padding-bottom: 30px;
     background-color: var(--header-footer-bg-color);
     border: 2px solid var(--body-bg-color);
@@ -258,16 +172,9 @@ body {
     box-shadow: 0 0 10px var(--body-bg-color);
 }
 
-/* .profile-card:first-child {
-    margin-top: -30px;
-    flex-basis: 100%;
-} */
-
-/* .profile-picture img {
-    border-radius: 5%;
-} */
-
-.profile-card .title, .contact, .tid-bit {
+.profile-card .title,
+.contact,
+.tid-bit {
     padding: 10px;
 }
 
@@ -280,7 +187,6 @@ body {
     padding: 10px;
     text-align: center;
     background-color: var(--header-footer-bg-color);
-    /* background-color: black; */
     border: 2px solid var(--body-bg-color);
     border-radius: 10px;
     box-shadow: 0 0 10px var(--body-bg-color);
@@ -292,105 +198,66 @@ body {
 }
 
 .profile-card a:hover {
-    text-decoration: underline;
+    transform: scale(1.2);
 }
-
-
-
 
 .name {
     font-size: 1.5em;
     font-weight: bold;
-    /* text-transform: uppercase; */
     padding: 10px 0;
 }
 
-@media (max-width: 767px) {
-    .staff-profiles-container {
-      margin-top: 20px;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      gap: 20px;
-    }
-  }
-  
-  /* Styles for staff-profiles-container on screens smaller than 576px */
-  @media (max-width: 575px) {
-    .staff-profiles-container {
-      margin-top: 10px;
-    }
-  }
+.profile-card a i.fab.fa-instagram {
+    background: -moz-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+    background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+    background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s;
+}
 
-
-
-
-
+.profile-card a i.fab.fa-instagram:hover {
+    transform: scale(1.2);
+}
 
 @media only screen and (max-width: 1180px) {
-    header {
-        flex-direction: column;
-        align-items: center;
+    .hamburger-menu {
+        display: block;
+        z-index: 1001;
     }
 
-    .left-side {
-        text-align: center;
+    .menu-container.open {
+        display: block;
+        z-index: 1001;
     }
 
-    .right-side {
+    .menu a {
+        z-index: 1001;
+    }
+
+    .navbar {
         display: none;
     }
 
-    .hamburger-menu {
-        display: block;
+    .logo {
+        margin-left: -11%;
     }
 
-    .book-now-link {
-        display: none;
-    }
-
-    .book-now-buttons-container {
-        display: block;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-
-    .slider-container {
-        max-width: 100%;
+    .staff-profiles-container {
+        border: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        padding-top: 345px;
+        padding-bottom: 20px;
     }
 }
 
 @media only screen and (min-width: 1181px) {
     .hamburger-menu {
         display: none;
-    }
-}
-
-@media only screen and (max-width: 1121px) {
-    .profile-container {
-        border: none;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, min-content);
-        padding-bottom: 20px;
-    }
-
-    .profile-picture {
-        display: flex;
-        padding-left: 0px;
-        justify-content: center;
-    }
-
-    .profile-container p {
-        padding-left: 5px;
-        padding-right: 5px;
-        text-align: center;
-    }
-
-    .slider-container {
-        max-width: 100%;
     }
 }
 

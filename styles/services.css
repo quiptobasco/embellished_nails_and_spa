@@ -221,4 +221,8 @@ li {
     .hamburger-menu {
         display: none;
     }
+
+    .services-container {
+        padding-top: 370px;
+    }
 }

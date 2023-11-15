@@ -169,12 +169,14 @@ body {
         z-index: 1001;
     }
 
-    .navbar {
-        display: none;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .logo {
-        margin-left: -11%;
+    .navbar {
+        display: none;
     }
 
     .pictures-grid {

@@ -427,6 +427,10 @@ header .book-now-link .people a:hover {
         display: block;
     }
 
+    .logo {
+        margin-left: -55px;
+    }
+
     .navbar {
         display: none;
     }

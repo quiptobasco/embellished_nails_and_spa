@@ -427,10 +427,6 @@ header .book-now-link .people a:hover {
         display: block;
     }
 
-    .logo {
-        margin-left: -55px;
-    }
-
     .navbar {
         display: none;
     }
@@ -438,10 +434,6 @@ header .book-now-link .people a:hover {
     .slider-container {
         max-width: 100%;
     }
-
-    /* .slider {
-        padding-top: 30px;
-    } */
 
     .information-container {
         flex-direction: column;
